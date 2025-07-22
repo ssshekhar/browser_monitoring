@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Integrity Monitor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tesseract.js OCR (WebAssembly) -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <!-- WebGazer.js Gaze Tracking -->
+  <script src="https://webgazer.cs.brown.edu/webgazer.js"></script>
+
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    h1 { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>Interview Integrity Monitor</h1>
+  <p>This page captures your screen and webcam gaze for integrity checks. Permissions will be requested.</p>
+
+  <!-- Hidden video to capture the shared screen -->
+  <video id="screenVideo" autoplay playsinline style="display:none;"></video>
+  <!-- Hidden canvas for OCR snapshots -->
+  <canvas id="captureCanvas" style="display:none;"></canvas>
+
+  <!-- Main monitoring script -->
+  <script src="monitor.js"></script>
+</body>
+</html>
